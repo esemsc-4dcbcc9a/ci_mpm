@@ -15,12 +15,12 @@ class TestSimpleFunctions(object):
         isum = my_sum(iterable)
         assert isum == expected
 
-    @pytest.mark.parametrize('input', 'expected', [
-        ([0, 1, 2, 3]),
-        ([1, 1, 2, 6])
+    @pytest.mark.parametrize("input, expected", [
+        (0, 1),
+        (3, 6)
     ])
     def test_my_factorial(self, input, expected):
         """Test my factorial function"""
         facs = factorial(input)
+        print(facs)
         assert facs == expected
-
